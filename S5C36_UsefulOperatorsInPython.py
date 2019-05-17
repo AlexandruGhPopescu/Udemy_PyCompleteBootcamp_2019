@@ -13,6 +13,7 @@
 #           - RANDINT: generates a random integer in a given range
 #                   -> imported from the random library: from random import randint
 #                   -> it can be saved in a variable for later use
+#                   -> !!! there is another module for cryptographicaly generate random numbers - SECRETS
 #           - INPUT: takes input form keyboard as a STRING
 #                   -> it can be saved in a variable for later use
 #                   -> it can be casted to float or int
