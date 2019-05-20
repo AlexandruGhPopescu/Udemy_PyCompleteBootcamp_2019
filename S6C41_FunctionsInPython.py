@@ -112,3 +112,6 @@ def pig_latin(my_word):
 
 pig_latin('bar')
 pig_latin('alter')
+
+
+print('\n--- THEND ---')

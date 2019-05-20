@@ -67,4 +67,6 @@ my_list_q6 = [x[0] for x in st.split()]
 print(
     f"\tThese are the first letters of every word in the sentance:\n\t {my_list_q6}")
 
+
+print('\n--- THEND ---')
 # Great Job!
