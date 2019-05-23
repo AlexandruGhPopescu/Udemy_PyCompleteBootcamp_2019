@@ -26,6 +26,18 @@ spy_game([1, 2, 4, 0, 0, 7, 5])
 spy_game([1, 0, 2, 4, 0, 5, 7])
 spy_game([1, 7, 2, 0, 4, 5, 0])
 
+
+def spy_game_v2(nums):
+
+    code = [0, 0, 7, 'x']
+
+    for num in nums:
+        if num == code[0]:
+            code.pop(0)   # code.remove(num) also works
+
+    return len(code) == 1
+
+
 # COUNT PRIMES:
 print('\n*** F2 COUNT PRIMES: ***')
 # Write a function that returns the number of prime numbers that exist up to and including a given number
@@ -70,6 +82,24 @@ count_primes(49)
 count_primes(122)
 count_primes(100)
 
+
+def count_primes_v2(num):
+    primes = [2]
+    x = 3
+    if num < 2:  # for the case of num = 0 or 1
+        return 0
+    while x <= num:
+        for y in range(3, x, 2):  # test all odd factors up to x-1
+            if x % y == 0:
+                x += 2
+                break
+        else:
+            primes.append(x)
+            x += 2
+    print(primes)
+    return len(primes)
+
+
 # PRINT BIG:
 print('\n*** F3 PRINT BIG: ***')
 # Write a function that takes in a single letter, and returns a 5x5 representation of that letter
@@ -93,10 +123,22 @@ def print_big(letter):
     return print(f"\t The demanded letter is '{letter}'\n{letter_dictionary[letter]}\n--- ")
 
 
+def print_big_v2(letter):
+
+    patterns = {1: '  *  ', 2: ' * * ', 3: '*   *', 4: '*****',
+                5: '**** ', 6: '   * ', 7: ' *   ', 8: '*   * ', 9: '*    '}
+
+    alphabet = {'A': [1, 2, 4, 3, 3], 'B': [5, 3, 5, 3, 5],
+                'C': [4, 9, 9, 9, 4], 'D': [5, 3, 3, 3, 5], 'E': [4, 9, 4, 9, 4]}
+
+    for pattern in alphabet[letter.upper()]:
+        print(patterns[pattern])
+
 # print_big('a')
 # print_big('B')
 # print_big('c')
 # print_big('d')
 # print_big('e')
+
 
 print('\n--- THEND ---')

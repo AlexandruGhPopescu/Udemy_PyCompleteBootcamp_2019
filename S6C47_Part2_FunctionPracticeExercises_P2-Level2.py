@@ -76,7 +76,7 @@ print('\n*** F3 BLACKJACK: ***')
 
 def blackjack(card_1, card_2, card_3):
     deck_list = [card_1, card_2, card_3]
-    deck_sum = card_1 + card_2 + card_3
+    deck_sum = sum(deck_list)
     if (deck_sum <= 21):
         return print(f"\t You're at: {deck_sum} - {deck_list}\n--- ")
     elif (deck_sum > 21):
@@ -142,6 +142,25 @@ summer_69([2, 1, 6, 9, 11])
 summer_69([4, 9, 5, 6, 7, 8, 9])
 summer_69([4, 5, 6, 7, 8])
 summer_69([])
+
+
+def summer_69_v2(arr):
+    total = 0
+    add = True
+    for num in arr:
+        while add:
+            if num != 6:
+                total += num
+                break
+            else:
+                add = False
+        while not add:
+            if num != 9:
+                break
+            else:
+                add = True
+                break
+    return total
 
 
 print('\n--- THEND ---')
