@@ -1,0 +1,26 @@
+Hints and Tips for Functions and Methods Assignment
+Here are some hints for helping you complete the assignment!
+
+1. Volume of a sphere
+Write out your solution by hand as an equation with an input radius, then try to convert your logic to code.
+
+2. Range check function
+Keep in mind how to use the in operator and the range() function.
+How can you use in to check if something is in a list?
+
+3. Upper Case and Lower Case strings
+Whats a goo way to iterate through the string? A for loop perhaps? How can you keep track of you counts?
+A variable or maybe even a dictionary with a key for upper and a key for lower,
+Then add counts to the value corresponding to the correct key.
+
+4. Unique numbers in list.
+Try using set() or even just using a for loop with a list and append numbers that you haven't already seen
+
+5. Multiply all numbers in a list
+Use a for loop to go through the list and take advantage of *= which operate similarly to += .
+
+6. Palindrome check
+Remember what s[::-1] does if s is a string, or find a built - in way to reverse a string(function or method)
+
+7. Pangram check
+This is really tricky, but try using set() and feel free to check the answer for this one!
